@@ -235,3 +235,15 @@ btnSort.addEventListener('click', function (e) {
   transactionsSorted = !transactionsSorted;
 });
 
+//Array.form() example
+const logoImage = document.querySelector('.logo');
+logoImage.addEventListener('click', function () {
+  const transactionsUi = document.querySelectorAll('.transactions__value');
+  console.log(transactionsUi);
+  // const transactionUiArray = Array.from(transactionsUi);
+  // console.log(transactionUiArray.map(elem => Number(elem.textContent)));
+  const transactionsUiArray = Array.from(transactionsUi, elem =>
+    Number(elem.textContent)
+  );
+  console.log(transactionsUiArray);
+});
